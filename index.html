@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T.I.A. - Tecnologia Inclusiva para Autistas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <header class="topo">
+            <div class="marca">T.I.A.</div>
+            <p>TECNOLOGIA INCLUSIVA PARA AUTISTAS</p>
+        </header>
+
+        <!-- TELA INICIAL -->
+        <section id="tela-inicio" class="painel">
+
+            <span class="etiqueta">UM OLHAR MAIS HUMANO</span>
+
+            <h1>Desafio da <span>inclusão</span></h1>
+
+            <p class="introducao">
+                Responda às situações, reflita sobre cada escolha e descubra como pequenas atitudes podem tornar a escola mais inclusiva.
+            </p>
+
+            <div id="aviso-bloqueio" class="aviso">
+                Aguardando autorização do administrador.
+            </div>
+
+            <label for="nome">Como podemos chamar você?</label>
+
+            <input
+                id="nome"
+                maxlength="24"
+                placeholder="Digite seu nome"
+            >
+
+            <button id="btn-iniciar" class="botao principal" disabled>
+                Aguardando liberação do ADM
+            </button>
+
+            <button id="btn-ranking-inicio" class="botao secundario">
+                Ver ranking
+            </button>
+
+            <button id="btn-admin" class="botao texto">
+                Acesso do administrador
+            </button>
+
+            <p class="nota">
+                8 situações · uma única participação por aparelho.
+            </p>
+
+        </section>
+
+
+        <!-- TELA DO ADMINISTRADOR -->
+        <section id="tela-admin" class="painel escondido">
+
+            <span class="etiqueta">ÁREA RESTRITA</span>
+
+            <h1>Painel do <span>ADM</span></h1>
+
+            <div id="admin-login">
+
+                <p class="introducao">
+                    Digite o código administrativo.
+                </p>
+
+                <label for="senha-admin">
+                    Código do administrador
+                </label>
+
+                <input
+                    id="senha-admin"
+                    type="password"
+                    inputmode="numeric"
+                    placeholder="Código de acesso"
+                >
+
+                <button id="btn-entrar-admin" class="botao principal">
+                    Entrar
+                </button>
+
+            </div>
+
+            <div id="admin-controles" class="escondido">
+
+                <div id="status-sessao" class="aviso"></div>
+
+                <button id="btn-liberar" class="botao principal">
+                    Liberar início do jogo
+                </button>
+
+                <button id="btn-bloquear" class="botao secundario">
+                    Bloquear novos inícios
+                </button>
+
+                <p class="nota">
+                    A liberação permite iniciar apenas quem ainda não participou neste aparelho.
+                </p>
+
+            </div>
+
+            <p id="erro-admin" class="erro"></p>
+
+            <button id="btn-sair-admin" class="botao texto">
+                Voltar ao início
+            </button>
+
+        </section>
+
+
+        <!-- TELA DO JOGO -->
+        <section id="tela-jogo" class="painel escondido">
+
+            <div class="linha-info">
+                <span id="progresso"></span>
+                <span id="pontuacao">0 PONTOS</span>
+            </div>
+
+            <div class="barra">
+                <div id="barra-progresso"></div>
+            </div>
+
+            <span class="etiqueta" id="categoria"></span>
+
+            <h2 id="pergunta-titulo"></h2>
+
+            <p id="pergunta-texto" class="pergunta-texto"></p>
+
+            <div id="opcoes" class="opcoes"></div>
+
+            <div id="reflexao" class="reflexao escondido">
+
+                <h3 id="resultado-titulo"></h3>
+
+                <p id="resultado-texto"></p>
+
+                <div id="frase-chave" class="frase-chave"></div>
+
+                <button id="btn-proxima" class="botao principal">
+                    Próxima situação
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- TELA FINAL -->
+        <section id="tela-final" class="painel escondido">
+
+            <span class="etiqueta">DESAFIO CONCLUÍDO</span>
+
+            <h1>Você fez a diferença!</h1>
+
+            <p id="mensagem-final" class="introducao"></p>
+
+            <div class="placar-final">
+                <strong id="pontos-finais">0</strong>
+                <span>pontos</span>
+            </div>
+
+            <p class="frase-chave">
+                Incluir é reconhecer as necessidades de cada pessoa e agir com respeito.
+            </p>
+
+            <button id="btn-salvar" class="botao principal">
+                Salvar no ranking
+            </button>
+
+            <button id="btn-ver-ranking" class="botao secundario">
+                Ver ranking
+            </button>
+
+            <p id="status-salvar" class="nota"></p>
+
+            <p class="nota">
+                Sua participação foi concluída. Não é possível jogar novamente neste aparelho.
+            </p>
+
+        </section>
+
+
+        <!-- TELA DO RANKING -->
+        <section id="tela-ranking" class="painel escondido">
+
+            <span class="etiqueta">PLACAR</span>
+
+            <h1>Ranking <span>T.I.A.</span></h1>
+
+            <ol id="lista-ranking" class="lista-ranking">
+                <li>Carregando...</li>
+            </ol>
+
+            <p id="status-ranking" class="nota"></p>
+
+            <button id="btn-voltar" class="botao secundario">
+                Voltar
+            </button>
+
+        </section>
+
+
+        <!-- RODAPÉ -->
+        <footer>
+            PROJETO T.I.A. · UM OLHAR MAIS HUMANO
+        </footer>
+
+    </main>
+
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>
